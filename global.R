@@ -17,13 +17,13 @@ suppressMessages({
   # library(gganimate) # library(devtools); install_github("dgrtwo/gganimate")
   library(colourpicker) # library(devtools); devtools::install_github("daattali/colourpicker")
   library(here)
-  library(logging)
+  # library(logging) # may be useful for improved logging
 })
 
 # Set up better logging defaults
-options(shiny.error = function() {
-  logging::logerror(sys.calls() %>% as.character() %>% paste(collapse = ", "))
-})
+# options(shiny.error = function() {
+#   logging::logerror(sys.calls() %>% as.character() %>% paste(collapse = ", "))
+# })
 
 # Directories are not necessary in this app, but I am leaving the code in, as
 # you may want to know how to handle directories for apps hosted on shinyapps.io
@@ -53,9 +53,7 @@ yAxisVars <- c("Life Expectancy" = "lifeExp", "Population" = "pop", "GDP Per Cap
 # vector by the name, and not the actual string value
 yAxisNames <- c("lifeExp" = "Life Expectancy", "pop" = "Population", "gdpPercap" = "GDP Per Capita")
 
-# construct possible geoms to display on the graph with pretty names for selectInput
-geomsToChoose <- c(
-  "Point" = "geom_point",
-  "Boxplot" = "geom_boxplot",
-  "Violin" = "geom_violin"
-)
+
+# Bring in geom function!
+source("add_geom.R")
+source("add_scale.R")

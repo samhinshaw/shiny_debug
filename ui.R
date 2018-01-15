@@ -1,7 +1,7 @@
 shinyUI(fluidPage(
 
   # Application title
-  titlePanel("Lab 1 Solutions"),
+  titlePanel("Bugged Shiny App (Part 1)"),
 
   # Sidebar with a slider input for number of bins
   sidebarLayout(
@@ -29,13 +29,17 @@ shinyUI(fluidPage(
       colourInput("pointColor", "Point Color", value = "#000"),
       sliderInput("years", label = "Year range", min = 1952, max = 2007, step = 1, value = c(1952, 2007), sep = ""),
       selectInput(
-        "y_axis", "Y-Axis Variable",
+        "yAxis", "Y-Axis Variable",
         choices = yAxisVars, # Pulled from my definition in global.R
         selected = "lifeExp", selectize = TRUE
       ),
       radioButtons(
         "geom", "Geom",
-        choices = geomsToChoose, # Pulled from my definition in global.R
+        choices = c(
+          "Point" = "geom_point",
+          "Boxplot" = "geom_boxplot",
+          "Violin" = "geom_violin"
+        ), # Pulled from my definition in global.R
         selected = "geom_point"
       ),
       textInput(

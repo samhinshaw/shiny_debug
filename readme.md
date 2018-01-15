@@ -16,7 +16,7 @@ Furthermore, if we remove all the continent selections, we get an error instead 
 
 ![Bugged Shiny App - Second Error](screenshots/1_bug_2.png)
 
-### Working Shiny App
+### Fixed Shiny App
 
 All continents displayed.
 
