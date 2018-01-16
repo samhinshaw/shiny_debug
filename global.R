@@ -37,14 +37,19 @@ rootDir <- here::here()
 # shinyapps.io server prints the following dir:
 # "/srv/connect/apps/lab1solutions"
 # Insert your shinyapps.io app name here (the '$' is regex for 'end of string'):
-if (str_detect("lab1solutions$", rootDir)) {
-  # Taking advantage of R's lack of block scope
-  # appDir will be a global variable
-  appDir <- rootDir
-} else {
-  lab1Dir <- file.path(rootDir, "solutions", "lab1")
-  appDir <- file.path(lab1Dir, "shiny_app")
-}
+# if (str_detect("lab1solutions$", rootDir)) {
+#   # Taking advantage of R's lack of block scope
+#   # appDir will be a global variable
+#   appDir <- rootDir
+# } else {
+#   lab1Dir <- file.path(rootDir, "solutions", "lab1")
+#   appDir <- file.path(lab1Dir, "shiny_app")
+# }
+
+# Bring in geom function!
+source(file.path(rootDir, "add_geom.R"))
+source(file.path(rootDir, "add_scale.R"))
+
 
 # construct named vector of possible y-axis variables. This will go into a selectInput
 yAxisVars <- c("Life Expectancy" = "lifeExp", "Population" = "pop", "GDP Per Capita" = "gdpPercap")
@@ -52,8 +57,3 @@ yAxisVars <- c("Life Expectancy" = "lifeExp", "Population" = "pop", "GDP Per Cap
 # and use the pretty name as an axis label. Unfortunately you must select from a
 # vector by the name, and not the actual string value
 yAxisNames <- c("lifeExp" = "Life Expectancy", "pop" = "Population", "gdpPercap" = "GDP Per Capita")
-
-
-# Bring in geom function!
-source("add_geom.R")
-source("add_scale.R")
