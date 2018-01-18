@@ -8,6 +8,8 @@ Pictured below is the Shiny app I wrote for your lab 1 solutions. However, it is
 
 ### Bugged Shiny App
 
+`part1_bugged` branch - `git checkout part1_bugged`
+
 When we select multiple continents to display, we do not seem to get more points on the screen.
 
 ![Bugged Shiny App](screenshots/1_bug.png)
@@ -17,6 +19,8 @@ Furthermore, if we remove all the continent selections, we get an error instead 
 ![Bugged Shiny App - Second Error](screenshots/1_bug_2.png)
 
 ### Fixed Shiny App
+
+`part1_working` branch - `git checkout part1_working`
 
 All continents displayed.
 
@@ -28,10 +32,14 @@ Gracefully displayed blank plot.
 
 ## Part 2
 
-### Bugged Shiny App 
+### Bugged Shiny App
+
+`part2_bugged` branch - `git checkout part2_bugged`
 
 ![Bugged Shiny App - Part 2](screenshots/2_bug.png)
 
 ### Working Shiny App
+
+`part2_working` branch - `git checkout part2_working`
 
 ![Working Shiny App - Part 2](screenshots/2_fix.png)
