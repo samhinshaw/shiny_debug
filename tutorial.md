@@ -16,3 +16,7 @@ We're getting weird and inconsistent errors, how can we figure out what is going
 * Execute code from source document
 
 ## Part 2 - Advanced Debugging
+
+* Code splitting
+* Can't place breakpoint in split code
+* Step into function
