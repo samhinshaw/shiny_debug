@@ -6,7 +6,7 @@ shinyServer(function(input, output) {
     # Filter gapminder by the years chosen from the sliderInput and the continents chosen from the checkboxGroupInput
     gapminderFiltYear <- gapminder %>%
       dplyr::filter(year >= min(input$years) & year <= max(input$years)) %>%
-      dplyr::filter(continent %in% input$continents)
+      dplyr::filter(continent == input$continents)
 
     # Plot the chart
     gapminderPlot <- ggplot(
