@@ -9,7 +9,7 @@ addScale <- function(plot, responseVar) {
 
     displayPlot <- plot + scale_y_log10(label = scales::comma)
 
-  } else if (responseVar == "gdpPercap") {
+  } else if (responseVar == "gdpPerCap") {
 
     displayPlot <- plot + scale_y_log10(labels = scales::dollar_format())
 

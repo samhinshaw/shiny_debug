@@ -18,11 +18,11 @@ shinyServer(function(input, output) {
       xlab("Year") + ylab(yAxisNames[input$yAxis])
 
     # Display the plot with the desired/selected aesthetic mapping
-    displayPlot <- gapminderPlot %>%
-      addGeom(geom = input$geom) %>%
-      addScale(responseVar = input$yAxis)
+    plotWithGeom <- addGeom(gapminderPlot, geom = input$geom)
 
-    return(displayPlot)
+    plotWithScale <- addScale(plotWithGeom, responseVar = input$yAxis)
+
+    return(plotWithScale)
 
 
   })

@@ -1,7 +1,7 @@
 shinyUI(fluidPage(
 
   # Application title
-  titlePanel("Working Shiny App (Part 2)"),
+  titlePanel("Bugged Shiny App (Part 2)"),
 
   # Sidebar with a slider input for number of bins
   sidebarLayout(

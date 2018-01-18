@@ -38,3 +38,4 @@ yAxisVars <- c("Life Expectancy" = "lifeExp", "Population" = "pop", "GDP Per Cap
 # and use the pretty name as an axis label. Unfortunately you must select from a
 # vector by the name, and not the actual string value
 yAxisNames <- c("lifeExp" = "Life Expectancy", "pop" = "Population", "gdpPercap" = "GDP Per Capita")
+
