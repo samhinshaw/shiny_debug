@@ -27,3 +27,11 @@ Gracefully displayed blank plot.
 ![Working Shiny App](screenshots/1_fix_2.png)
 
 ## Part 2
+
+### Bugged Shiny App 
+
+![Bugged Shiny App - Part 2](screenshots/2_bug.png)
+
+### Working Shiny App
+
+![Working Shiny App - Part 2](screenshots/2_fix.png)
