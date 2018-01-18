@@ -46,8 +46,13 @@ rootDir <- here::here()
 #   appDir <- file.path(lab1Dir, "shiny_app")
 # }
 
-# Bring in geom function!
+# Here we have done some code-splitting to keep us sane! We are storing a
+# function in each file, and bringing in these functions to keep our server.R
+# file small.
+
+# Bring in geom function from external file
 source(file.path(rootDir, "add_geom.R"))
+# Bring in scale function from external file
 source(file.path(rootDir, "add_scale.R"))
 
 
